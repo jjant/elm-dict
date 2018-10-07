@@ -73,6 +73,8 @@ empty _ =
 
     AllDict.get "my key" myDict == Just 42
 
+Has to check each key for equality until the right key is found, though, giving it runtime O(n). Be careful how many times you call this on extremely large Dicts!
+
 -}
 get : k -> Dict k v -> Maybe v
 get k dict =
