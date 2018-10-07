@@ -21,3 +21,4 @@ Unlike other dictionaries, this implementation allows one to set predicates on t
 
    Dict.get "Another value" withDefaultValue10 == Just 42
 ```
+Word of warning: using `(==)` equality means that this dictionary's `Dict.get` implementation is O(n). Make sure it won't need to handle excessively large numbers of values!
