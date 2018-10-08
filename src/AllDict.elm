@@ -73,7 +73,7 @@ empty _ =
 
     AllDict.get "my key" myDict == Just 42
 
-Has to check each key for equality until the right key is found, though, giving it runtime O(n). Be careful how many times you call this on extremely large Dicts!
+This applies the key to the dictionary "function," though, so remember that this lookup time is O(n) for n the number of operations on the table, including initial inserts.
 
 -}
 get : k -> Dict k v -> Maybe v
