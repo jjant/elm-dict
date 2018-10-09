@@ -73,6 +73,8 @@ empty _ =
 
     AllDict.get "my key" myDict == Just 42
 
+This applies the key to the dictionary "function," though, so remember that this lookup time is O(n) for n the number of operations on the table, including initial inserts.
+
 -}
 get : k -> Dict k v -> Maybe v
 get k dict =
