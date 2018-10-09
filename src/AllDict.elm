@@ -1,4 +1,10 @@
-module AllDict exposing (Dict, empty, get, insert, remove, withPredicate, fromList, map)
+module AllDict exposing
+    ( Dict
+    , empty, fromList
+    , get
+    , insert, remove, withPredicate
+    , map
+    )
 
 {-| A dictionary mapping keys to values. This dictionary can use any (non-function) type as a key.
 The Dict in the core libraries can only use comparable keys.
@@ -115,6 +121,7 @@ remove k1 d =
     \k2 ->
         if k1 == k2 then
             Nothing
+
         else
             d k2
 
@@ -145,6 +152,7 @@ withPredicate pred val dict =
     \k ->
         if pred k then
             Just val
+
         else
             dict k
 
